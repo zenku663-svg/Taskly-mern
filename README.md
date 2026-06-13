@@ -119,7 +119,7 @@ TASK
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-github-username/Taskly-mern.git
+git clone https://github.com/your-github-zenku663-svg/Taskly-mern.git
 ```
 
 ### Backend Setup
