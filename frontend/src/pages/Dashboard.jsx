@@ -26,7 +26,7 @@ function Dashboard() {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/tasks",
+        "https://taskly-backend-xz75.onrender.com/api/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -45,7 +45,7 @@ function Dashboard() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/tasks",
+        "https://taskly-backend-xz75.onrender.com/api/tasks",
         {
           title,
           description,
@@ -70,7 +70,7 @@ function Dashboard() {
   const deleteTask = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskly-backend-xz75.onrender.com/api/tasks/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ function Dashboard() {
     const saveEditedTask = async () => {
       try {
         await axios.put(
-          `http://localhost:5000/api/tasks/${editingTask._id}`,
+          `https://taskly-backend-xz75.onrender.com/api/tasks/${editingTask._id}`,
           {
             title: editTitle,
             description: editDescription,
@@ -122,7 +122,7 @@ function Dashboard() {
     const updateStatus = async (id, status) => {
       try {
         await axios.put(
-          `http://localhost:5000/api/tasks/${id}`,
+          `https://taskly-backend-xz75.onrender.com/api/tasks/${id}`,
           { status },
           {
             headers: {
