@@ -19,10 +19,10 @@ function Dashboard() {
   const userName = localStorage.getItem("name");
   const userEmail = localStorage.getItem("email");
   const logoutHandler = () => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("name");
-  window.location.href = "/login";
-};
+    localStorage.removeItem("token");
+    localStorage.removeItem("name");
+    navigate("/login");
+  };
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
