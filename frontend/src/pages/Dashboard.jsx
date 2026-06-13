@@ -21,11 +21,16 @@ function Dashboard() {
   const userName = localStorage.getItem("name");
   const userEmail = localStorage.getItem("email");
   const logoutHandler = () => {
-    alert("Logout clicked");
-    localStorage.removeItem("token");
-    localStorage.removeItem("name");
-    navigate("/login");
-  };
+      localStorage.removeItem("token");
+      localStorage.removeItem("name");
+      localStorage.removeItem("email");
+
+      toast.success("Logout Successful");
+
+      setTimeout(() => {
+        navigate("/login");
+      }, 1500);
+    };
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
